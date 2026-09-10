@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "buckets": [
+    {
+      "bucket": "langfuse-aws-state-251213589273-us-east-1",
+      "public_access_block": "PASS",
+      "encryption": "PASS"
+    },
+    {
+      "bucket": "langfuse-aws-neon-251213589273-us-east-1",
+      "public_access_block": "PASS",
+      "encryption": "PASS"
+    },
+    {
+      "bucket": "langfuse-aws-data-251213589273-us-east-1",
+      "public_access_block": "PASS",
+      "encryption": "PASS"
+    },
+    {
+      "bucket": "langfuse-aws-backup-251213589273-us-east-1",
+      "public_access_block": "PASS",
+      "encryption": "PASS"
+    }
+  ],
+  "media_cors": "PASS",
+  "state_versioning": "PASS",
+  "credential_isolation": [
+    {
+      "identity": "neon",
+      "own_bucket_list": "PASS",
+      "all_other_bucket_lists_denied": "PASS"
+    },
+    {
+      "identity": "data",
+      "own_bucket_list": "PASS",
+      "all_other_bucket_lists_denied": "PASS"
+    },
+    {
+      "identity": "backup",
+      "own_bucket_list": "PASS",
+      "all_other_bucket_lists_denied": "PASS"
+    }
+  ]
+}

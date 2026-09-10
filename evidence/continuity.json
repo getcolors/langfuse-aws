@@ -1,0 +1,11 @@
+{
+  "host": "langfuse-aws.bigconfig.online",
+  "trace_id": "a95fffcc1dc1da2f007c16fccf69dc99",
+  "root_id": "0f995d7ba79ed612",
+  "generation_id": "d6a95a93f44ca49b",
+  "marker": "aws-public-c655d82e28e4eb4ac7be766f",
+  "score_id": "9295ab2521712ca7f16a11d619990fde",
+  "verified": true,
+  "media_id": "dzvFcjdSVmDSKJM1j4F1iX",
+  "media_sha256": "773bc57237525660d22893358f8175897b4c674aec9275e546765304dca16c89"
+}

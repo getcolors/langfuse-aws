@@ -1,0 +1,702 @@
+{
+  "profile": "langfuse-aws",
+  "region": "us-east-1",
+  "instances": [
+    {
+      "id": "i-04cd634840161e696",
+      "name": "langfuse-aws-clickhouse-0",
+      "state": "running",
+      "public_ip": "3.89.223.7",
+      "private_ip": "10.74.1.158",
+      "root_device": "/dev/sda1",
+      "ebs_volumes": [
+        {
+          "id": "vol-054b9023780c7dd2a",
+          "device": "/dev/sda1",
+          "root": true,
+          "delete_on_termination": true
+        }
+      ]
+    },
+    {
+      "id": "i-05c205e8c420ff2cf",
+      "name": "langfuse-aws-clickhouse-1",
+      "state": "running",
+      "public_ip": "52.91.4.16",
+      "private_ip": "10.74.1.81",
+      "root_device": "/dev/sda1",
+      "ebs_volumes": [
+        {
+          "id": "vol-0e811558e6b5549af",
+          "device": "/dev/sda1",
+          "root": true,
+          "delete_on_termination": true
+        }
+      ]
+    },
+    {
+      "id": "i-055e7658ece73304b",
+      "name": "langfuse-aws-app-0",
+      "state": "running",
+      "public_ip": "54.91.255.170",
+      "private_ip": "10.74.1.33",
+      "root_device": "/dev/sda1",
+      "ebs_volumes": [
+        {
+          "id": "vol-011f3a084e619cbee",
+          "device": "/dev/sda1",
+          "root": true,
+          "delete_on_termination": true
+        }
+      ]
+    },
+    {
+      "id": "i-028af32e08e348b77",
+      "name": "langfuse-aws-neon-0",
+      "state": "running",
+      "public_ip": "35.175.182.134",
+      "private_ip": "10.74.1.217",
+      "root_device": "/dev/sda1",
+      "ebs_volumes": [
+        {
+          "id": "vol-0e48d1f42c48e8dbe",
+          "device": "/dev/sda1",
+          "root": true,
+          "delete_on_termination": true
+        }
+      ]
+    },
+    {
+      "id": "i-0fd36cbcbc34372f6",
+      "name": "langfuse-aws-redis-0",
+      "state": "running",
+      "public_ip": "3.91.185.37",
+      "private_ip": "10.74.1.163",
+      "root_device": "/dev/sda1",
+      "ebs_volumes": [
+        {
+          "id": "vol-06e1629215bbef126",
+          "device": "/dev/sda1",
+          "root": true,
+          "delete_on_termination": true
+        }
+      ]
+    },
+    {
+      "id": "i-01ebaf90bcda25c15",
+      "name": "langfuse-aws-clickhouse-2",
+      "state": "running",
+      "public_ip": "54.172.93.231",
+      "private_ip": "10.74.1.124",
+      "root_device": "/dev/sda1",
+      "ebs_volumes": [
+        {
+          "id": "vol-0e8af343f94b3c608",
+          "device": "/dev/sda1",
+          "root": true,
+          "delete_on_termination": true
+        }
+      ]
+    }
+  ],
+  "Vpcs": [
+    {
+      "id": "vpc-0043cb23609523d31",
+      "name": "langfuse-aws"
+    }
+  ],
+  "Subnets": [
+    {
+      "id": "subnet-00b77506c22acf913",
+      "name": "langfuse-aws"
+    }
+  ],
+  "RouteTables": [
+    {
+      "id": "rtb-06d9f08b2723e076d",
+      "name": "langfuse-aws"
+    }
+  ],
+  "InternetGateways": [
+    {
+      "id": "igw-09f8ba1c51bd60b14",
+      "name": "langfuse-aws"
+    }
+  ],
+  "SecurityGroups": [
+    {
+      "id": "sg-0ba8837d62b44e6c7",
+      "name": "langfuse-aws-app-firewall",
+      "ingress": [
+        {
+          "FromPort": 80,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "188.114.96.0/20"
+            },
+            {
+              "CidrIp": "190.93.240.0/20"
+            },
+            {
+              "CidrIp": "103.31.4.0/22"
+            },
+            {
+              "CidrIp": "173.245.48.0/20"
+            },
+            {
+              "CidrIp": "141.101.64.0/18"
+            },
+            {
+              "CidrIp": "172.64.0.0/13"
+            },
+            {
+              "CidrIp": "131.0.72.0/22"
+            },
+            {
+              "CidrIp": "104.16.0.0/13"
+            },
+            {
+              "CidrIp": "197.234.240.0/22"
+            },
+            {
+              "CidrIp": "103.21.244.0/22"
+            },
+            {
+              "CidrIp": "162.158.0.0/15"
+            },
+            {
+              "CidrIp": "198.41.128.0/17"
+            },
+            {
+              "CidrIp": "104.24.0.0/14"
+            },
+            {
+              "CidrIp": "108.162.192.0/18"
+            },
+            {
+              "CidrIp": "103.22.200.0/22"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 80,
+          "UserIdGroupPairs": []
+        },
+        {
+          "FromPort": 22,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 22,
+          "UserIdGroupPairs": []
+        },
+        {
+          "FromPort": 443,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "173.245.48.0/20"
+            },
+            {
+              "CidrIp": "162.158.0.0/15"
+            },
+            {
+              "CidrIp": "108.162.192.0/18"
+            },
+            {
+              "CidrIp": "104.16.0.0/13"
+            },
+            {
+              "CidrIp": "188.114.96.0/20"
+            },
+            {
+              "CidrIp": "190.93.240.0/20"
+            },
+            {
+              "CidrIp": "197.234.240.0/22"
+            },
+            {
+              "CidrIp": "198.41.128.0/17"
+            },
+            {
+              "CidrIp": "103.31.4.0/22"
+            },
+            {
+              "CidrIp": "103.22.200.0/22"
+            },
+            {
+              "CidrIp": "103.21.244.0/22"
+            },
+            {
+              "CidrIp": "172.64.0.0/13"
+            },
+            {
+              "CidrIp": "104.24.0.0/14"
+            },
+            {
+              "CidrIp": "141.101.64.0/18"
+            },
+            {
+              "CidrIp": "131.0.72.0/22"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 443,
+          "UserIdGroupPairs": []
+        }
+      ],
+      "egress": [
+        {
+          "IpProtocol": "-1",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "UserIdGroupPairs": []
+        }
+      ]
+    },
+    {
+      "id": "sg-09de001816a0c0919",
+      "name": "langfuse-aws-clickhouse-firewall",
+      "ingress": [
+        {
+          "FromPort": 9000,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "10.74.1.158/32"
+            },
+            {
+              "CidrIp": "10.74.1.33/32"
+            },
+            {
+              "CidrIp": "10.74.1.124/32"
+            },
+            {
+              "CidrIp": "10.74.1.81/32"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 9000,
+          "UserIdGroupPairs": []
+        },
+        {
+          "FromPort": 9009,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "10.74.1.124/32"
+            },
+            {
+              "CidrIp": "10.74.1.81/32"
+            },
+            {
+              "CidrIp": "10.74.1.158/32"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 9009,
+          "UserIdGroupPairs": []
+        },
+        {
+          "FromPort": 22,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 22,
+          "UserIdGroupPairs": []
+        },
+        {
+          "FromPort": 8123,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "10.74.1.33/32"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 8123,
+          "UserIdGroupPairs": []
+        },
+        {
+          "FromPort": 9181,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "10.74.1.158/32"
+            },
+            {
+              "CidrIp": "10.74.1.81/32"
+            },
+            {
+              "CidrIp": "10.74.1.124/32"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 9181,
+          "UserIdGroupPairs": []
+        },
+        {
+          "FromPort": 9234,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "10.74.1.158/32"
+            },
+            {
+              "CidrIp": "10.74.1.124/32"
+            },
+            {
+              "CidrIp": "10.74.1.81/32"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 9234,
+          "UserIdGroupPairs": []
+        }
+      ],
+      "egress": [
+        {
+          "IpProtocol": "-1",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "UserIdGroupPairs": []
+        }
+      ]
+    },
+    {
+      "id": "sg-04a5a4eb8289fe2bb",
+      "name": "langfuse-aws-redis-firewall",
+      "ingress": [
+        {
+          "FromPort": 22,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 22,
+          "UserIdGroupPairs": []
+        },
+        {
+          "FromPort": 6379,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "10.74.1.33/32"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 6379,
+          "UserIdGroupPairs": []
+        }
+      ],
+      "egress": [
+        {
+          "IpProtocol": "-1",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "UserIdGroupPairs": []
+        }
+      ]
+    },
+    {
+      "id": "sg-048f39a9094c56c56",
+      "name": "langfuse-aws-neon-firewall",
+      "ingress": [
+        {
+          "FromPort": 22,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 22,
+          "UserIdGroupPairs": []
+        },
+        {
+          "FromPort": 55433,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "10.74.1.33/32"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "ToPort": 55433,
+          "UserIdGroupPairs": []
+        }
+      ],
+      "egress": [
+        {
+          "IpProtocol": "-1",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": [],
+          "UserIdGroupPairs": []
+        }
+      ]
+    }
+  ],
+  "KeyPairs": [
+    {
+      "id": "key-0a504e5d9458d740a",
+      "name": "langfuse-aws"
+    }
+  ],
+  "recorded_ebs_volumes": [
+    {
+      "id": "vol-054b9023780c7dd2a",
+      "device": "/dev/sda1",
+      "root": true,
+      "delete_on_termination": true
+    },
+    {
+      "id": "vol-0e811558e6b5549af",
+      "device": "/dev/sda1",
+      "root": true,
+      "delete_on_termination": true
+    },
+    {
+      "id": "vol-011f3a084e619cbee",
+      "device": "/dev/sda1",
+      "root": true,
+      "delete_on_termination": true
+    },
+    {
+      "id": "vol-0e48d1f42c48e8dbe",
+      "device": "/dev/sda1",
+      "root": true,
+      "delete_on_termination": true
+    },
+    {
+      "id": "vol-06e1629215bbef126",
+      "device": "/dev/sda1",
+      "root": true,
+      "delete_on_termination": true
+    },
+    {
+      "id": "vol-0e8af343f94b3c608",
+      "device": "/dev/sda1",
+      "root": true,
+      "delete_on_termination": true
+    }
+  ],
+  "Volumes": [
+    {
+      "id": "vol-0e48d1f42c48e8dbe",
+      "state": "in-use",
+      "size_gib": 60,
+      "encrypted": true
+    },
+    {
+      "id": "vol-011f3a084e619cbee",
+      "state": "in-use",
+      "size_gib": 60,
+      "encrypted": true
+    },
+    {
+      "id": "vol-0e811558e6b5549af",
+      "state": "in-use",
+      "size_gib": 60,
+      "encrypted": true
+    },
+    {
+      "id": "vol-0e8af343f94b3c608",
+      "state": "in-use",
+      "size_gib": 60,
+      "encrypted": true
+    },
+    {
+      "id": "vol-054b9023780c7dd2a",
+      "state": "in-use",
+      "size_gib": 60,
+      "encrypted": true
+    },
+    {
+      "id": "vol-06e1629215bbef126",
+      "state": "in-use",
+      "size_gib": 60,
+      "encrypted": true
+    }
+  ],
+  "VpcDependencies": {
+    "Vpcs": [
+      {
+        "id": "vpc-0043cb23609523d31",
+        "name": "langfuse-aws"
+      }
+    ],
+    "Subnets": [
+      {
+        "id": "subnet-00b77506c22acf913",
+        "name": "langfuse-aws"
+      }
+    ],
+    "RouteTables": [
+      {
+        "id": "rtb-0e9fa5ec7c91a560a",
+        "name": null
+      },
+      {
+        "id": "rtb-06d9f08b2723e076d",
+        "name": "langfuse-aws"
+      }
+    ],
+    "InternetGateways": [
+      {
+        "id": "igw-09f8ba1c51bd60b14",
+        "name": "langfuse-aws"
+      }
+    ],
+    "SecurityGroups": [
+      {
+        "id": "sg-0ba8837d62b44e6c7",
+        "name": "langfuse-aws-app-firewall"
+      },
+      {
+        "id": "sg-09de001816a0c0919",
+        "name": "langfuse-aws-clickhouse-firewall"
+      },
+      {
+        "id": "sg-0b1e5d36e1d1f6e22",
+        "name": null
+      },
+      {
+        "id": "sg-04a5a4eb8289fe2bb",
+        "name": "langfuse-aws-redis-firewall"
+      },
+      {
+        "id": "sg-048f39a9094c56c56",
+        "name": "langfuse-aws-neon-firewall"
+      }
+    ],
+    "NetworkInterfaces": [
+      {
+        "id": "eni-0e0749b260148aeda",
+        "name": null
+      },
+      {
+        "id": "eni-00809afcbb845b160",
+        "name": null
+      },
+      {
+        "id": "eni-033565ae792baf805",
+        "name": null
+      },
+      {
+        "id": "eni-0349e7d1b7a334260",
+        "name": null
+      },
+      {
+        "id": "eni-0122b6a46e8620532",
+        "name": null
+      },
+      {
+        "id": "eni-0eae4acea93fa00d7",
+        "name": null
+      }
+    ],
+    "NetworkAcls": [
+      {
+        "id": "acl-0077b1d74da252770",
+        "name": null
+      }
+    ]
+  },
+  "buckets": [
+    {
+      "name": "langfuse-aws-state-251213589273-us-east-1",
+      "status": "present",
+      "ownership_tags": {
+        "colors:purpose": "managed-backend",
+        "colors:owner": "251213589273",
+        "colors:profile": "langfuse-aws"
+      }
+    },
+    {
+      "name": "langfuse-aws-data-251213589273-us-east-1",
+      "status": "present",
+      "ownership_tags": {
+        "colors:owner": "langfuse-storage",
+        "colors:profile": "langfuse-aws"
+      }
+    },
+    {
+      "name": "langfuse-aws-neon-251213589273-us-east-1",
+      "status": "present",
+      "ownership_tags": {
+        "colors:owner": "langfuse-storage",
+        "colors:profile": "langfuse-aws"
+      }
+    },
+    {
+      "name": "langfuse-aws-backup-251213589273-us-east-1",
+      "status": "present",
+      "ownership_tags": {
+        "colors:owner": "langfuse-storage",
+        "colors:profile": "langfuse-aws"
+      }
+    }
+  ],
+  "iam_users": [
+    {
+      "name": "langfuse-aws-storage-backup",
+      "status": "present"
+    },
+    {
+      "name": "langfuse-aws-storage-data",
+      "status": "present"
+    },
+    {
+      "name": "langfuse-aws-storage-neon",
+      "status": "present"
+    }
+  ],
+  "remaining_resource_count": 37,
+  "all_recorded_volumes_absent": false,
+  "remaining_billable_resource_count": 16
+}

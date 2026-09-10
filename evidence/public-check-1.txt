@@ -1,0 +1,48 @@
+PASS public HTTPS health with certificate validation
+PASS Cloudflare proxy response
+PASS anonymous API request rejected
+PASS wrong secret API request rejected
+PASS public OTLP ingestion accepted
+PASS OTLP reports no rejected spans
+PASS public score accepted
+PASS public score identity recorded
+PASS exact trace and generation content readable through public API
+PASS exact score retained on the generation through public API
+PASS public media registration
+PASS S3 presigned media upload
+PASS media upload completion recorded
+PASS public media download URL
+PASS media metadata records completed upload
+PASS S3 media exact SHA256 roundtrip
+{
+  "status": "PASS",
+  "gates": [
+    "public HTTPS health with certificate validation",
+    "Cloudflare proxy response",
+    "anonymous API request rejected",
+    "wrong secret API request rejected",
+    "public OTLP ingestion accepted",
+    "OTLP reports no rejected spans",
+    "public score accepted",
+    "public score identity recorded",
+    "exact trace and generation content readable through public API",
+    "exact score retained on the generation through public API",
+    "public media registration",
+    "S3 presigned media upload",
+    "media upload completion recorded",
+    "public media download URL",
+    "media metadata records completed upload",
+    "S3 media exact SHA256 roundtrip"
+  ],
+  "continuity": {
+    "host": "langfuse-aws.bigconfig.online",
+    "trace_id": "a95fffcc1dc1da2f007c16fccf69dc99",
+    "root_id": "0f995d7ba79ed612",
+    "generation_id": "d6a95a93f44ca49b",
+    "marker": "aws-public-c655d82e28e4eb4ac7be766f",
+    "score_id": "9295ab2521712ca7f16a11d619990fde",
+    "verified": true,
+    "media_id": "dzvFcjdSVmDSKJM1j4F1iX",
+    "media_sha256": "773bc57237525660d22893358f8175897b4c674aec9275e546765304dca16c89"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "zone": "bigconfig.online",
+  "hostname": "langfuse-aws.bigconfig.online",
+  "expected": "present",
+  "records": [
+    {
+      "id": "d1400cca85530a875336c2b956e0d2d5",
+      "name": "langfuse-aws.bigconfig.online",
+      "type": "A",
+      "content": "54.91.255.170",
+      "proxied": true
+    }
+  ]
+}

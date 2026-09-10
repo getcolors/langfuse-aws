@@ -1,0 +1,6 @@
+{
+  "bucket": "langfuse-aws-data-251213589273-us-east-1",
+  "key": "langfuse-aws/.colors-recovery-verified",
+  "last_modified": "2026-09-10T11:41:22+00:00",
+  "marker": "langfuse-aws clickhouse=20260910T113817Z postgres=20260910T113827Z at=20260910T114121Z"
+}

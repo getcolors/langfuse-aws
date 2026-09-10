@@ -1,0 +1,84 @@
+{
+  "observed_all_six_stopped": true,
+  "hosts": [
+    {
+      "host": "langfuse-aws-clickhouse-0",
+      "checked_at": "2026-09-10T11:47:26.247134+00:00",
+      "ssh_exit": 0,
+      "status": [
+        "CH=inactive",
+        "NO_DOCKER"
+      ],
+      "stopped": true
+    },
+    {
+      "host": "langfuse-aws-clickhouse-1",
+      "checked_at": "2026-09-10T11:47:26.478420+00:00",
+      "ssh_exit": 0,
+      "status": [
+        "CH=inactive",
+        "NO_DOCKER"
+      ],
+      "stopped": true
+    },
+    {
+      "host": "langfuse-aws-app-0",
+      "checked_at": "2026-09-10T11:47:25.503085+00:00",
+      "ssh_exit": 0,
+      "status": [
+        "CH=inactive"
+      ],
+      "stopped": true
+    },
+    {
+      "host": "langfuse-aws-neon-0",
+      "checked_at": "2026-09-10T11:47:27.364161+00:00",
+      "ssh_exit": 0,
+      "status": [
+        "CH=inactive"
+      ],
+      "stopped": true
+    },
+    {
+      "host": "langfuse-aws-redis-0",
+      "checked_at": "2026-09-10T11:47:25.467900+00:00",
+      "ssh_exit": 0,
+      "status": [
+        "CH=inactive"
+      ],
+      "stopped": true
+    },
+    {
+      "host": "langfuse-aws-clickhouse-2",
+      "checked_at": "2026-09-10T11:47:26.387016+00:00",
+      "ssh_exit": 0,
+      "status": [
+        "CH=inactive",
+        "NO_DOCKER"
+      ],
+      "stopped": true
+    }
+  ],
+  "buckets": [
+    {
+      "bucket": "langfuse-aws-state-251213589273-us-east-1",
+      "status": "present",
+      "checked_at": "2026-09-10T11:47:27.761610+00:00"
+    },
+    {
+      "bucket": "langfuse-aws-neon-251213589273-us-east-1",
+      "status": "present",
+      "checked_at": "2026-09-10T11:47:28.104417+00:00"
+    },
+    {
+      "bucket": "langfuse-aws-data-251213589273-us-east-1",
+      "status": "present",
+      "checked_at": "2026-09-10T11:47:28.460691+00:00"
+    },
+    {
+      "bucket": "langfuse-aws-backup-251213589273-us-east-1",
+      "status": "present",
+      "checked_at": "2026-09-10T11:47:28.803182+00:00"
+    }
+  ]
+}

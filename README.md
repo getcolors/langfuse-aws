@@ -1,7 +1,11 @@
 # Langfuse on AWS
 
 Deployment profile `langfuse-aws`, using the `getcolors/langfuse` package and
-`getcolors/colors-compute`. Public endpoint: https://langfuse-aws.bigconfig.online.
+`getcolors/colors-compute`. Live verification passed on September 10, 2026,
+including public API/media checks, repeat convergence, and backup recovery.
+The test deployment was deleted; independent audits found zero remaining
+resources. See [the verification report](verification.md) and its evidence.
+The configured hostname is `langfuse-aws.bigconfig.online`.
 
 Six Ubuntu machines host Neon Postgres, Redis, three ClickHouse replicas, and
 Langfuse web/worker with Caddy. Cloudflare manages DNS and proxies HTTPS.
@@ -14,8 +18,9 @@ their own buckets; infrastructure credentials stay on the operator machine.
 Install Babashka, OpenTofu, Ansible, AWS CLI, Python 3 with boto3, and OpenSSH. The copied
 `green` launcher resolves the package's immutable dependencies.
 
-The `.envrc` loads AWS and Cloudflare credentials from `../.envrc`, and three
-durable application secrets from the ignored `.deployment-secrets` file.
+The `.envrc` loads AWS credentials from `../.envrc` and then the ignored
+`.deployment-secrets` file. Store the Cloudflare token and three durable
+application secrets in `.deployment-secrets`.
 Provide `COLORS_PAR_AWS_ACCESS_KEY_ID`, `COLORS_PAR_AWS_SECRET_ACCESS_KEY`, and
 `COLORS_PAR_CLOUDFLARE_API_TOKEN` (Zone:Read and DNS:Edit on bigconfig.online).
 The application secrets are `COLORS_PAR_LANGFUSE_ENCRYPTION_KEY` (64 hex),
@@ -39,5 +44,7 @@ deployment, including its managed storage and all stored data:
 COLORS_PAR_COMPUTE_PREVENT_DESTROY=false ./green delete
 ```
 
-Offline builds and dry-runs pass. Live verification awaits the Cloudflare token. This assessment uses one availability
-zone and is not a production availability or performance certification.
+The live test used the Green implementation and published immutable pins.
+Red and Blue passed offline builds and parity checks. This assessment uses
+one availability zone and is not a production availability or performance
+certification.

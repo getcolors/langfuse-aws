@@ -1,0 +1,36 @@
+PASS public HTTPS health with certificate validation
+PASS Cloudflare proxy response
+PASS anonymous API request rejected
+PASS wrong secret API request rejected
+PASS continuity record is complete for this host
+PASS exact trace and generation content readable through public API
+PASS exact score retained on the generation through public API
+PASS retained media download URL
+PASS retained media upload remains complete
+PASS retained media exact SHA256
+{
+  "status": "PASS",
+  "gates": [
+    "public HTTPS health with certificate validation",
+    "Cloudflare proxy response",
+    "anonymous API request rejected",
+    "wrong secret API request rejected",
+    "continuity record is complete for this host",
+    "exact trace and generation content readable through public API",
+    "exact score retained on the generation through public API",
+    "retained media download URL",
+    "retained media upload remains complete",
+    "retained media exact SHA256"
+  ],
+  "continuity": {
+    "host": "langfuse-aws.bigconfig.online",
+    "trace_id": "a95fffcc1dc1da2f007c16fccf69dc99",
+    "root_id": "0f995d7ba79ed612",
+    "generation_id": "d6a95a93f44ca49b",
+    "marker": "aws-public-c655d82e28e4eb4ac7be766f",
+    "score_id": "9295ab2521712ca7f16a11d619990fde",
+    "verified": true,
+    "media_id": "dzvFcjdSVmDSKJM1j4F1iX",
+    "media_sha256": "773bc57237525660d22893358f8175897b4c674aec9275e546765304dca16c89"
+  }
+}

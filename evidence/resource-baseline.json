@@ -1,0 +1,54 @@
+{
+  "profile": "langfuse-aws",
+  "region": "us-east-1",
+  "account": "251213589273",
+  "instance_ids": [
+    "i-04cd634840161e696",
+    "i-05c205e8c420ff2cf",
+    "i-055e7658ece73304b",
+    "i-028af32e08e348b77",
+    "i-0fd36cbcbc34372f6",
+    "i-01ebaf90bcda25c15"
+  ],
+  "volumes": [
+    {
+      "id": "vol-054b9023780c7dd2a",
+      "device": "/dev/sda1",
+      "root": true,
+      "delete_on_termination": true
+    },
+    {
+      "id": "vol-0e811558e6b5549af",
+      "device": "/dev/sda1",
+      "root": true,
+      "delete_on_termination": true
+    },
+    {
+      "id": "vol-011f3a084e619cbee",
+      "device": "/dev/sda1",
+      "root": true,
+      "delete_on_termination": true
+    },
+    {
+      "id": "vol-0e48d1f42c48e8dbe",
+      "device": "/dev/sda1",
+      "root": true,
+      "delete_on_termination": true
+    },
+    {
+      "id": "vol-06e1629215bbef126",
+      "device": "/dev/sda1",
+      "root": true,
+      "delete_on_termination": true
+    },
+    {
+      "id": "vol-0e8af343f94b3c608",
+      "device": "/dev/sda1",
+      "root": true,
+      "delete_on_termination": true
+    }
+  ],
+  "vpc_ids": [
+    "vpc-0043cb23609523d31"
+  ]
+}

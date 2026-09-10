@@ -1,0 +1,10 @@
+>>> :langfuse/start (describe)
+<<< :langfuse/start (59348ms)
+>>> :langfuse/describe (describe)
+langfuse-aws-neon-0              ok         2026-09-10T11:36:13Z
+langfuse-aws-redis-0             ok         2026-09-10T11:34:07Z
+langfuse-aws-clickhouse-0        ok         2026-09-10T11:33:42Z
+langfuse-aws-clickhouse-1        ok         2026-09-10T11:33:41Z
+langfuse-aws-clickhouse-2        ok         2026-09-10T11:33:41Z
+langfuse-aws-app-0               ok         2026-09-10T11:35:26Z
+<<< :langfuse/describe (12433ms)

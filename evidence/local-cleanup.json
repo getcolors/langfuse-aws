@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "private_key_absent": true,
+  "public_key_absent": true,
+  "ssh_aliases_absent": true
+}

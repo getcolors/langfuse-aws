@@ -1,0 +1,125 @@
+{
+  "captured_at": "2026-09-10T11:44:38.946292+00:00",
+  "scope": "Direct SSH read-only service state after rehearsal; container names/state/status/health and HTTP status only",
+  "hosts": [
+    {
+      "host": "langfuse-aws-neon-0",
+      "checked_at": "2026-09-10T11:44:34.262531+00:00",
+      "checks": {
+        "expected_containers_running": true,
+        "no_stopped_or_unhealthy_containers": true,
+        "required_container_health": true
+      },
+      "containers": [
+        {
+          "name": "neon-compute-1",
+          "state": "running",
+          "status": "Up 29 minutes (healthy)",
+          "health": "healthy"
+        },
+        {
+          "name": "neon-pageserver-1",
+          "state": "running",
+          "status": "Up 29 minutes",
+          "health": "not_configured"
+        },
+        {
+          "name": "neon-safekeeper-1",
+          "state": "running",
+          "status": "Up 29 minutes",
+          "health": "not_configured"
+        },
+        {
+          "name": "neon-storage_broker-1",
+          "state": "running",
+          "status": "Up 29 minutes",
+          "health": "not_configured"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "host": "langfuse-aws-redis-0",
+      "checked_at": "2026-09-10T11:44:34.262809+00:00",
+      "checks": {
+        "expected_containers_running": true,
+        "no_stopped_or_unhealthy_containers": true,
+        "required_container_health": true
+      },
+      "containers": [
+        {
+          "name": "redis-redis-1",
+          "state": "running",
+          "status": "Up 3 minutes (healthy)",
+          "health": "healthy"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "host": "langfuse-aws-clickhouse-0",
+      "checked_at": "2026-09-10T11:44:34.263352+00:00",
+      "checks": {
+        "clickhouse_active": true
+      },
+      "clickhouse_service": "active",
+      "passed": true
+    },
+    {
+      "host": "langfuse-aws-clickhouse-1",
+      "checked_at": "2026-09-10T11:44:34.263971+00:00",
+      "checks": {
+        "clickhouse_active": true
+      },
+      "clickhouse_service": "active",
+      "passed": true
+    },
+    {
+      "host": "langfuse-aws-clickhouse-2",
+      "checked_at": "2026-09-10T11:44:34.266897+00:00",
+      "checks": {
+        "clickhouse_active": true
+      },
+      "clickhouse_service": "active",
+      "passed": true
+    },
+    {
+      "host": "langfuse-aws-app-0",
+      "checked_at": "2026-09-10T11:44:34.267621+00:00",
+      "checks": {
+        "expected_containers_running": true,
+        "no_stopped_or_unhealthy_containers": true,
+        "required_container_health": true,
+        "web_strict_200": true,
+        "worker_strict_200": true,
+        "no_restore_containers": true
+      },
+      "containers": [
+        {
+          "name": "langfuse-caddy-1",
+          "state": "running",
+          "status": "Up 22 minutes",
+          "health": "not_configured"
+        },
+        {
+          "name": "langfuse-langfuse-web-1",
+          "state": "running",
+          "status": "Up 24 minutes (healthy)",
+          "health": "healthy"
+        },
+        {
+          "name": "langfuse-langfuse-worker-1",
+          "state": "running",
+          "status": "Up 3 minutes (healthy)",
+          "health": "healthy"
+        }
+      ],
+      "http_status": {
+        "web_strict": 200,
+        "worker_strict": 200
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}
