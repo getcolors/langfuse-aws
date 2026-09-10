@@ -1,0 +1,6 @@
+.*
+!.envrc
+!.gitignore
+!.agents
+*.log
+__pycache__/
